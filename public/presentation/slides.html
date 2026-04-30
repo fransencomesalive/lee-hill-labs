@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lee Hill Labs — ECA Investor Deck</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/presentation/css/base.css">
+  <link rel="stylesheet" href="/presentation/css/slides.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+  <main class="slide-stage">
+    <div class="slide-viewport">
+
+      <!-- 01 COVER -->
+      <section class="slide slide--cover is-active" data-index="1">
+        <div class="slide__meta">
+          <span class="slide__eyebrow">Angel Investor Overview</span>
+        </div>
+        <div class="slide__content">
+          <div class="slide__rule"></div>
+          <h1 class="heading-cover">Emergency<br>Coordination<br>App</h1>
+          <p class="slide__sub">A community coordination layer for the moments when official information is necessary, but not enough.</p>
+          <div class="cover-footer">
+            <span class="label">Lee Hill Labs</span>
+            <span class="cover-footer__sep">/</span>
+            <span class="cover-detail">Colorado Front Range and Foothill Communities</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 THE MOMENT WE ARE BUILDING FOR -->
+      <section class="slide slide--split" data-index="2">
+        <div class="slide__content">
+          <div class="card" style="padding: 56px 64px; display: flex; flex-direction: column; justify-content: center;">
+            <span class="label">The Moment</span>
+            <h2 class="heading-slide" style="margin-top: 20px; max-width: 640px;">Emergencies rarely arrive as clean instructions.</h2>
+            <p class="body-text" style="margin-top: 28px;">During a wildfire, flood, storm, evacuation, or outage, most people are not calmly reading official bulletins. They are trying to answer immediate questions.</p>
+          </div>
+          <div class="card" style="padding: 48px 56px; display: flex; flex-direction: column; justify-content: center;">
+            <span class="label">What People Need to Know</span>
+            <ul class="slide__bullets slide__bullets--sm" style="margin-top: 24px;">
+              <li>Is my family safe?</li>
+              <li>Is my road open?</li>
+              <li>Who nearby needs help?</li>
+              <li>What do I need to do now?</li>
+              <li>Which updates are verified?</li>
+              <li>What did I already agree to do for my neighbors?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 WHY NOW -->
+      <section class="slide slide--split-wide" data-index="3">
+        <div class="slide__content">
+          <div class="card" style="padding: 52px 64px;">
+            <span class="label">Why Now</span>
+            <h2 class="heading-deck">Longer fire seasons and more severe weather are making local coordination a year-round need.</h2>
+            <ul class="slide__bullets slide__bullets--tight" style="margin-top: 28px;">
+              <li>Western communities: wildfire, smoke, evacuation, red flag conditions</li>
+              <li>Mountain and foothill communities: fire, flood, snow, wind, limited road redundancy</li>
+              <li>Coastal communities: hurricanes, storm surge, flooding, power outages</li>
+              <li>Plains and Midwest communities: tornadoes, derechos, hail, flash floods, grid interruptions</li>
+              <li>Urban and suburban communities: smoke, heat, flooding, fast-moving local incidents</li>
+            </ul>
+            <p class="table-note" style="margin-top: 24px;"><strong>ECA starts with wildfire.</strong> But the product category is broader: community-scale emergency coordination.</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="image-placeholder" style="flex: 1;">North America<br>Hazard Map</div>
+            <div class="card" style="padding: 24px 28px;">
+              <span class="label" style="font-size: 14px; margin-bottom: 8px; display: block;">Source</span>
+              <p style="color: var(--paper-faint); font-size: 19px; font-weight: 300; line-height: 1.4;">NOAA/NCEI billion-dollar disaster dataset, NIFC wildfire statistics, FEMA preparedness resources</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 THE GAP -->
+      <section class="slide slide--table" data-index="4">
+        <div class="slide__content">
+          <div class="card" style="padding: 44px 60px;">
+            <span class="label">The Gap</span>
+            <h2 class="heading-deck">Official alerts tell people something happened. Communities still need to coordinate what happens next.</h2>
+            <table class="slide-table" style="margin-top: 18px;">
+              <colgroup>
+                <col style="width: 18%">
+                <col style="width: 38%">
+                <col style="width: 44%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Current tool</th>
+                  <th>What it does well</th>
+                  <th>What it does not solve</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Official alerts</td>
+                  <td>Public safety notices, evacuation orders, warnings</td>
+                  <td>Household and neighborhood coordination</td>
+                </tr>
+                <tr>
+                  <td>Watch Duty-style maps</td>
+                  <td>Fire visibility, incident tracking, perimeter awareness</td>
+                  <td>Private group plans, tasks, family status, neighbor support</td>
+                </tr>
+                <tr>
+                  <td>Text chains</td>
+                  <td>Fast, familiar, informal</td>
+                  <td>Chaos, duplication, misinformation, no structure</td>
+                </tr>
+                <tr>
+                  <td>Social groups</td>
+                  <td>Broad local discussion</td>
+                  <td>Hard to verify, hard to act on, noisy</td>
+                </tr>
+                <tr>
+                  <td>Phone trees</td>
+                  <td>Human fallback</td>
+                  <td>Fragile, slow, not data-aware</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="flow-step__num">01</div>
+                <div class="flow-step__label">Alert</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-step__num">02</div>
+                <div class="flow-step__label">Context</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-step__num">03</div>
+                <div class="flow-step__label">Coordination</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-step__num">04</div>
+                <div class="flow-step__label">Action</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 PRODUCT THESIS -->
+      <section class="slide slide--iphone" data-index="5">
+        <div class="slide__content">
+          <div class="card" style="padding: 52px 64px;">
+            <span class="label">Product Thesis</span>
+            <h2 class="heading-deck">ECA turns a neighborhood into an organized response network.</h2>
+            <p class="body-text" style="margin-top: 20px;">A mobile coordination app for families, households, and trusted local groups during active emergencies and preparedness windows.</p>
+            <ul class="slide__bullets slide__bullets--tight" style="margin-top: 20px;">
+              <li>Create private household and neighborhood groups</li>
+              <li>Receive and organize emergency context</li>
+              <li>Share verified status updates</li>
+              <li>Coordinate tasks, roles, supplies, and check-ins</li>
+              <li>Understand local map conditions</li>
+              <li>Preserve access to critical information when connectivity is degraded</li>
+              <li>Run mock drills and test plans before an actual incident</li>
+            </ul>
+          </div>
+          <div class="iphone-placeholder">
+            <span>Dashboard</span>
+            <span class="iphone-placeholder__caption">Group Status, Active Alerts, Map Snapshot, Tasks, People Checked In, Offline Plan</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 USER STORY: WILDFIRE FIRST -->
+      <section class="slide slide--user-story" data-index="6">
+        <div class="slide__content">
+          <div class="story-header">
+            <span class="label">User Story: Wildfire First</span>
+            <h2 class="heading-deck">A foothill neighborhood gets a fire alert. ECA helps them move faster without creating more noise.</h2>
+          </div>
+          <div class="story-cards">
+            <div class="card" style="padding: 36px 44px;">
+              <div class="panel-title">Without ECA</div>
+              <ul class="slide__bullets slide__bullets--tight" style="margin-top: 8px;">
+                <li>Group texts split into multiple threads</li>
+                <li>People repeat the same questions</li>
+                <li>Rumors mix with official updates</li>
+                <li>No one knows who checked on elderly neighbors</li>
+                <li>Road status, pets, door codes, and task ownership are scattered</li>
+              </ul>
+            </div>
+            <div class="card" style="padding: 36px 44px; border-color: var(--teal);">
+              <div class="panel-title" style="color: var(--teal);">With ECA</div>
+              <ul class="slide__bullets slide__bullets--tight" style="margin-top: 8px;">
+                <li>The group receives a structured alert view</li>
+                <li>Members check in: Safe, Away, Need Help, Unknown</li>
+                <li>Tasks are assigned and marked complete</li>
+                <li>Critical household details are visible only to approved people</li>
+                <li>A map view shows relevant hazard context</li>
+                <li>The group can reference its offline plan if cell service degrades</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 MVP FEATURE SET -->
+      <section class="slide slide--grid" data-index="7">
+        <div class="slide__content">
+          <span class="label">Wildfire-First MVP</span>
+          <h2 class="heading-deck">MVP focuses on the smallest set of tools that can prove coordination value.</h2>
+          <div class="slide-grid">
+            <div class="grid-card">
+              <span class="grid-card__num">01</span>
+              <div class="grid-card__title">Private Groups</div>
+              <div class="grid-card__body">Households, neighbors, family members, and trusted contacts</div>
+            </div>
+            <div class="grid-card">
+              <span class="grid-card__num">02</span>
+              <div class="grid-card__title">Status Check-Ins</div>
+              <div class="grid-card__body">Safe, Away, Need Help, Unknown, Evacuating, Sheltering</div>
+            </div>
+            <div class="grid-card">
+              <span class="grid-card__num">03</span>
+              <div class="grid-card__title">Structured Alerts</div>
+              <div class="grid-card__body">Alert cards that connect incident context to group action</div>
+            </div>
+            <div class="grid-card">
+              <span class="grid-card__num">04</span>
+              <div class="grid-card__title">Task Coordination</div>
+              <div class="grid-card__body">Assign and track preparedness or incident tasks</div>
+            </div>
+            <div class="grid-card">
+              <span class="grid-card__num">05</span>
+              <div class="grid-card__title">Critical Info Access</div>
+              <div class="grid-card__body">Secure sharing for pets, gates, utilities, door codes, and contacts</div>
+            </div>
+            <div class="grid-card">
+              <span class="grid-card__num">06</span>
+              <div class="grid-card__title">Map Context</div>
+              <div class="grid-card__body">Hazard-aware map layer for incident proximity and area status</div>
+            </div>
+            <div class="grid-card">
+              <span class="grid-card__num">07</span>
+              <div class="grid-card__title">Offline-Ready Plan</div>
+              <div class="grid-card__body">Cached group plan and critical info for limited connectivity</div>
+            </div>
+            <div class="grid-card grid-card--highlight">
+              <span class="grid-card__num">08</span>
+              <div class="grid-card__title">Simulation Mode</div>
+              <div class="grid-card__body">Test with mock coordinates inside an active ZIP code, no physical presence required</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 PRODUCT PRINCIPLES -->
+      <section class="slide slide--principles" data-index="8">
+        <div class="slide__content">
+          <span class="label">Product Principles</span>
+          <h2 class="heading-deck">The product has to be calm, useful, and trusted under pressure.</h2>
+          <div class="principles-grid">
+            <div class="principle">
+              <div class="principle__title">No Panic UI</div>
+              <div class="principle__body">Severity should be clear without making people spiral</div>
+            </div>
+            <div class="principle">
+              <div class="principle__title">Private by Default</div>
+              <div class="principle__body">Sensitive household data should never become neighborhood gossip</div>
+            </div>
+            <div class="principle">
+              <div class="principle__title">Verified Where Possible</div>
+              <div class="principle__body">Separate official sources, group updates, and unverified observations</div>
+            </div>
+            <div class="principle">
+              <div class="principle__title">Action Over Noise</div>
+              <div class="principle__body">Every screen should help someone decide, coordinate, or confirm</div>
+            </div>
+            <div class="principle">
+              <div class="principle__title">Local First</div>
+              <div class="principle__body">Communities have different roads, risks, resources, and norms</div>
+            </div>
+            <div class="principle">
+              <div class="principle__title">Offline Matters</div>
+              <div class="principle__body">Emergency tools cannot assume perfect connectivity</div>
+            </div>
+            <div class="principle">
+              <div class="principle__title">Mock Testing is First-Class</div>
+              <div class="principle__body">The app must be testable before people rely on it</div>
+            </div>
+            <div class="principle" style="display: flex; align-items: center;">
+              <div class="principle__body" style="color: var(--paper-faint); font-style: italic; font-size: 22px;">Built for the moment people stop browsing and start acting.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 KEY SCREENS -->
+      <section class="slide slide--screens" data-index="9">
+        <div class="slide__content">
+          <span class="label">Prototype Screens</span>
+          <h2 class="heading-deck">Early design will focus on the flows that prove whether people understand and trust the app.</h2>
+          <div class="screens-row">
+            <div class="screen-card">
+              <div class="screen-placeholder">Onboarding</div>
+              <div class="screen-label">Onboarding &amp; Group Creation</div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-placeholder">Alert</div>
+              <div class="screen-label">Active Alert Dashboard</div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-placeholder">Check-In</div>
+              <div class="screen-label">Group Check-In</div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-placeholder">Map</div>
+              <div class="screen-label">Map Context</div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-placeholder">Tasks</div>
+              <div class="screen-label">Task Assignment</div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-placeholder">Offline</div>
+              <div class="screen-label">Offline Plan</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 BEYOND WILDFIRE -->
+      <section class="slide slide--map" data-index="10">
+        <div class="slide__content">
+          <span class="label">Platform Scope</span>
+          <h2 class="heading-deck">The same coordination pattern applies across regions and hazards.</h2>
+          <div class="region-grid">
+            <div class="region-card">
+              <div class="region-card__name">Mountain Towns</div>
+              <div class="region-card__hazards">Snow, fire, road closures, limited access</div>
+            </div>
+            <div class="region-card">
+              <div class="region-card__name">Midwest / Plains</div>
+              <div class="region-card__hazards">Tornadoes, derechos, hail, flash floods, grid interruptions</div>
+            </div>
+            <div class="region-card">
+              <div class="region-card__name">Urban / Suburban</div>
+              <div class="region-card__hazards">Smoke, heat, flooding, outages, fast-moving local incidents</div>
+            </div>
+            <div class="region-card">
+              <div class="region-card__name">California WUI</div>
+              <div class="region-card__hazards">Wildfire, smoke, power shutoffs</div>
+            </div>
+            <div class="region-card">
+              <div class="region-card__name">Colorado Foothills</div>
+              <div class="region-card__hazards">Wildfire, smoke, snow, wind, access issues</div>
+            </div>
+            <div class="region-card region-card--highlight">
+              <div class="region-card__name">Gulf / Atlantic Coast</div>
+              <div class="region-card__hazards">Hurricanes, flooding, power outages, post-storm coordination</div>
+            </div>
+          </div>
+          <div class="flow-steps" style="margin-top: 20px; padding-top: 0; border-top: none;">
+            <div class="flow-step"><div class="flow-step__num">Prepare</div></div>
+            <div class="flow-step"><div class="flow-step__num">Alert</div></div>
+            <div class="flow-step"><div class="flow-step__num">Check In</div></div>
+            <div class="flow-step"><div class="flow-step__num">Act</div></div>
+            <div class="flow-step"><div class="flow-step__num">Recover</div></div>
+            <div class="flow-step"><div class="flow-step__num">Improve</div></div>
+          </div>
+          <p class="table-note" style="border-top: none; margin-top: 14px; padding-top: 0;"><strong>The incident changes. The coordination problem repeats.</strong></p>
+        </div>
+      </section>
+
+      <!-- 11 WHO USES IT -->
+      <section class="slide slide--concentric" data-index="11">
+        <div class="slide__content">
+          <div>
+            <span class="label">Who Uses It</span>
+            <h2 class="heading-deck">ECA starts with households and trusted local groups, then expands toward organized community partners.</h2>
+            <div class="card" style="padding: 36px 44px; margin-top: 24px;">
+              <div class="panel-title">Initial Users</div>
+              <ul class="slide__bullets slide__bullets--tight" style="margin-top: 8px;">
+                <li>Homeowners in high-risk or high-consequence areas</li>
+                <li>Families with shared emergency responsibilities</li>
+                <li>Neighborhood pods and informal mutual-aid groups</li>
+                <li>Rural and foothill residents with limited road redundancy</li>
+                <li>People caring for elderly family, pets, livestock, or second homes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="concentric">
+            <div class="concentric-ring">
+              <span class="concentric-ring__label">Regional Ecosystem</span>
+            </div>
+            <div class="concentric-ring">
+              <span class="concentric-ring__label">Community Partners</span>
+            </div>
+            <div class="concentric-ring">
+              <span class="concentric-ring__label">Neighborhood</span>
+            </div>
+            <div class="concentric-ring">
+              <span class="concentric-ring__label">Trusted Group</span>
+            </div>
+            <div class="concentric-ring">
+              <span class="concentric-ring__label">Household</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 BUSINESS MODEL -->
+      <section class="slide slide--table" data-index="12">
+        <div class="slide__content">
+          <div class="card" style="padding: 40px 56px;">
+            <span class="label">Business Model Hypotheses</span>
+            <h2 class="heading-deck" style="font-size: 44px;">We are not locking the revenue model before we validate who feels the pain most clearly.</h2>
+            <table class="slide-table" style="margin-top: 14px;">
+              <colgroup>
+                <col style="width: 16%">
+                <col style="width: 16%">
+                <col style="width: 30%">
+                <col style="width: 38%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Buyer</th>
+                  <th>Why it could work</th>
+                  <th>What we need to validate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Consumer subscription</td>
+                  <td>Household / family</td>
+                  <td>Direct value, simple adoption</td>
+                  <td>Will households pay for preparedness and incident utility?</td>
+                </tr>
+                <tr>
+                  <td>Group subscription</td>
+                  <td>Neighborhood pod / HOA</td>
+                  <td>Shared cost, strong local relevance</td>
+                  <td>Who owns setup, payment, and admin?</td>
+                </tr>
+                <tr>
+                  <td>Community license</td>
+                  <td>Municipality / district / local org</td>
+                  <td>Public resilience and preparedness</td>
+                  <td>Procurement path, liability, support burden</td>
+                </tr>
+                <tr>
+                  <td>Insurance / risk partner</td>
+                  <td>Carrier / broker / mitigation partner</td>
+                  <td>Risk reduction and preparedness alignment</td>
+                  <td>Incentives, data boundaries, privacy requirements</td>
+                </tr>
+                <tr>
+                  <td>Freemium + paid features</td>
+                  <td>Individual and power users</td>
+                  <td>Low friction adoption</td>
+                  <td>Which features create paid conversion?</td>
+                </tr>
+                <tr>
+                  <td>Preparedness toolkit</td>
+                  <td>Households / groups / orgs</td>
+                  <td>Revenue before full incident automation</td>
+                  <td>Packaging, support, and repeat use</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table-note"><strong>MVP is designed to validate product behavior first,</strong> then sharpen the buyer motion.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 ROADMAP -->
+      <section class="slide slide--roadmap" data-index="13">
+        <div class="slide__content">
+          <span class="label">Roadmap: Formation to MVP</span>
+          <h2 class="heading-deck">The first phase is about proving the product, not pretending we are already a scaled company.</h2>
+          <div class="roadmap">
+            <div class="roadmap-step">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Spring 2026</div>
+              <div class="roadmap-step__phase">Company Formation</div>
+              <div class="roadmap-step__outcome">Entity, founder roles, legal setup, bank and accounting readiness</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Spring 2026</div>
+              <div class="roadmap-step__phase">Seed Tooling</div>
+              <div class="roadmap-step__outcome">Tool stack, shared workspace, roadmap, design system start</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Spring 2026</div>
+              <div class="roadmap-step__phase">Product Definition</div>
+              <div class="roadmap-step__outcome">MVP requirements, data assumptions, privacy model, user stories</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Late Spring / Early Summer</div>
+              <div class="roadmap-step__phase">Design Prototype</div>
+              <div class="roadmap-step__outcome">Clickable iOS prototype, core flows, investor and advisor demo</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Summer 2026</div>
+              <div class="roadmap-step__phase">MVP Build</div>
+              <div class="roadmap-step__outcome">Working app: group, alert, check-in, task, map, offline plan</div>
+            </div>
+            <div class="roadmap-step roadmap-step--highlight">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Summer 2026</div>
+              <div class="roadmap-step__phase">UAT + Mock Testing</div>
+              <div class="roadmap-step__outcome">Test with simulated active hazard area in Colorado Front Range context</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="roadmap-step__dot"></div>
+              <div class="roadmap-step__timing">Late Summer / Fall 2026</div>
+              <div class="roadmap-step__phase">Post-MVP Path</div>
+              <div class="roadmap-step__outcome">Validate buyer model, refine data integrations, prepare larger raise</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14 OPERATING SYSTEM -->
+      <section class="slide slide--os" data-index="14">
+        <div class="slide__content">
+          <span class="label">Operating System</span>
+          <h2 class="heading-deck">We are building the product and the company operating system at the same time.</h2>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-card__tool">Asana</div>
+              <div class="os-card__desc">Roadmap, boards, tasks, dependencies, timeline, and owner tracking</div>
+            </div>
+            <div class="os-card">
+              <div class="os-card__tool">Google Drive</div>
+              <div class="os-card__desc">Founder notes, meeting docs, research, product decisions, and investor materials</div>
+            </div>
+            <div class="os-card">
+              <div class="os-card__tool">GitHub</div>
+              <div class="os-card__desc">Code repository, issues, documentation, and version control</div>
+            </div>
+            <div class="os-card">
+              <div class="os-card__tool">Claude / Codex</div>
+              <div class="os-card__desc">Design planning, product documentation, code support, and engineering acceleration</div>
+            </div>
+            <div class="os-card">
+              <div class="os-card__tool">Figma / Design Tools</div>
+              <div class="os-card__desc">Wireframes, prototype, design system, and investor visuals</div>
+            </div>
+            <div class="os-card">
+              <div class="os-card__tool">Data / API Research</div>
+              <div class="os-card__desc">Wildfire and hazard feeds, geospatial assumptions, alert source evaluation</div>
+            </div>
+            <div class="os-card os-card--full os-card--highlight">
+              <div class="os-card__tool">Admin Agent Layer</div>
+              <div class="os-card__desc">Agentic layer that reads working docs, supports Asana tasking, summarizes updates, creates follow-ups, and reduces founder admin load</div>
+            </div>
+          </div>
+          <p class="table-note" style="margin-top: 16px;">We are not just buying subscriptions. We are buying speed, coordination, and reduced execution drag.</p>
+        </div>
+      </section>
+
+      <!-- 15 USE OF FUNDS -->
+      <section class="slide slide--table" data-index="15">
+        <div class="slide__content">
+          <div class="card" style="padding: 40px 56px;">
+            <span class="label">Use of Funds</span>
+            <h2 class="heading-deck" style="font-size: 44px;">Small checks help us get from concept to credible MVP without overcapitalizing too early.</h2>
+            <p style="color: var(--paper-faint); font-size: 20px; font-weight: 300; margin-top: 8px;">Angel participation in $5,000 increments.</p>
+            <table class="slide-table" style="margin-top: 14px;">
+              <colgroup>
+                <col style="width: 28%">
+                <col style="width: 54%">
+                <col style="width: 18%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>What it supports</th>
+                  <th>Estimated cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Entity, legal, and finance</td>
+                  <td>Formation docs, basic agreements, bank and accounting readiness</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Product and design tools</td>
+                  <td>Figma, prototyping, asset creation, design system setup</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Engineering tools</td>
+                  <td>GitHub, hosting, app dev tooling, test environments, code support</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>AI / tooling stack</td>
+                  <td>Claude, Codex, agent support, documentation automation, task acceleration</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Data / API exploration</td>
+                  <td>Hazard feeds, map layers, geospatial assumptions, alert-source evaluation</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>MVP build support</td>
+                  <td>Contract help, technical support, integrations, QA support</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>UAT and mock testing</td>
+                  <td>Test plans, simulated active-area testing, neighborhood feedback loops</td>
+                  <td>TBD</td>
+                </tr>
+                <tr>
+                  <td>Contingency</td>
+                  <td>Unplanned setup, data, legal, or technical costs</td>
+                  <td>TBD</td>
+                </tr>
+                <tr class="table-total">
+                  <td>Total</td>
+                  <td></td>
+                  <td>TBD</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table-note">Budget is designed for pre-raise proof, not production-scale operations.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 16 WHAT THIS FUNDING UNLOCKS -->
+      <section class="slide slide--grid" data-index="16">
+        <div class="slide__content">
+          <span class="label">What This Funding Unlocks</span>
+          <h2 class="heading-deck">The first dollars create proof points.</h2>
+          <div class="slide-grid">
+            <div class="grid-card">
+              <div class="grid-card__title">MVP Scope Document</div>
+              <div class="grid-card__body">Defined MVP scope and product requirements document</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Clickable iOS Prototype</div>
+              <div class="grid-card__body">Investor, advisor, and user feedback-ready prototype</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Product Roadmap</div>
+              <div class="grid-card__body">Working roadmap through summer 2026 UAT</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Privacy Model</div>
+              <div class="grid-card__body">Documented privacy and permissions architecture</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Data Assumptions</div>
+              <div class="grid-card__body">Wildfire-first data-source assumptions and integrations</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Simulation Testing Plan</div>
+              <div class="grid-card__body">End-to-end mock hazard testing plan and method</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Technical Architecture</div>
+              <div class="grid-card__body">Lightweight MVP build plan and cost basis</div>
+            </div>
+            <div class="grid-card">
+              <div class="grid-card__title">Early Community Feedback</div>
+              <div class="grid-card__body">Buyer model recommendation and next-stage raise clarity</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 17 TEAM -->
+      <section class="slide slide--founders" data-index="17">
+        <div class="slide__content">
+          <div class="founder-card">
+            <div class="founder-headshot"><img src="/assets/JE-headshot.jpeg" alt="John Elliot" style="object-position: center 28%;"></div>
+            <div class="founder-name">John Elliot</div>
+            <div class="founder-title">CEO / CMO</div>
+            <div class="founder-section-label">Owns</div>
+            <ul class="founder-bullets">
+              <li>Outreach and relationship development</li>
+              <li>Community and partner strategy</li>
+              <li>Marketing narrative and positioning</li>
+              <li>Investor and stakeholder conversations</li>
+              <li>External validation and market feedback</li>
+            </ul>
+          </div>
+          <div class="founder-card">
+            <div class="founder-headshot"><img src="/assets/RF-headshot.jpg" alt="Randall Fransen" style="object-position: center 0%;"></div>
+            <div class="founder-name">Randall Fransen</div>
+            <div class="founder-title">CPO / COO</div>
+            <div class="founder-section-label">Owns</div>
+            <ul class="founder-bullets">
+              <li>Product strategy and roadmap</li>
+              <li>UX, design direction, and prototype quality</li>
+              <li>Technical planning and build oversight</li>
+              <li>Operating system, tooling, documentation, and workflow</li>
+              <li>MVP definition, UAT planning, and execution discipline</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 18 MISSION / OPERATING BELIEF -->
+      <section class="slide slide--iphone" data-index="18">
+        <div class="slide__content">
+          <div class="card" style="padding: 52px 64px;">
+            <span class="label">Mission / Operating Belief</span>
+            <h2 class="heading-deck">Community resilience is built before the emergency.</h2>
+            <p class="body-text" style="margin-top: 20px;">The communities most exposed to changing weather, fire risk, and infrastructure strain cannot rely on information alone. They need preparation, trust, and coordination before the moment of crisis.</p>
+            <ul class="slide__bullets slide__bullets--tight" style="margin-top: 20px;">
+              <li>Checking on neighbors</li>
+              <li>Protecting family and pets</li>
+              <li>Knowing who has what</li>
+              <li>Sharing access carefully</li>
+              <li>Understanding when to leave</li>
+              <li>Helping without becoming noise</li>
+              <li>Learning from each event and improving the plan</li>
+            </ul>
+          </div>
+          <div class="iphone-placeholder">
+            <span>Civic</span>
+            <span class="iphone-placeholder__caption">Neighborhood road, foothills, early morning, subtle map line overlay</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 19 THE ASK -->
+      <section class="slide slide--closing" data-index="19">
+        <div class="slide__content">
+          <div class="card" style="padding: 52px 64px;">
+            <span class="label">The Ask</span>
+            <h2 class="heading-deck">We are looking for aligned early supporters to help us reach a credible MVP and summer test cycle.</h2>
+            <p class="body-text" style="margin-top: 16px; font-size: 28px;">Angel support in <strong style="color: var(--warm);">$5,000 increments</strong> to fund the pre-raise path from planning to prototype to MVP validation.</p>
+            <ul class="closing-seek">
+              <li>Early angel capital</li>
+              <li>Strategic advisors</li>
+              <li>Emergency management and preparedness conversations</li>
+              <li>Data and mapping guidance</li>
+              <li>Community testing partners in Colorado Front Range</li>
+              <li>Introductions to aligned investors or civic partners</li>
+            </ul>
+            <div class="closing-cta">
+              We are building this because the gap is real, local, and repeatable. The first version starts here. The need does not stop here.
+            </div>
+          </div>
+          <div class="iphone-placeholder">
+            <span>Group Ready</span>
+            <span class="iphone-placeholder__caption">Plan available offline. 12 of 14 checked in. Active Wildfire Watch.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPENDIX A: VALIDATION QUESTIONS -->
+      <section class="slide slide--appendix" data-index="20">
+        <div class="slide__content">
+          <span class="appendix-tag">Appendix A</span>
+          <span class="label">MVP Validation Questions</span>
+          <div class="card" style="padding: 44px 60px; margin-top: 24px; flex: 1;">
+            <ul class="appendix-bullets appendix-bullets--2col">
+              <li>Do users understand the difference between official alerts, group updates, and observations?</li>
+              <li>Will households enter critical emergency information before an incident?</li>
+              <li>What information are users willing to share, and with whom?</li>
+              <li>Which check-in statuses are intuitive under pressure?</li>
+              <li>Do groups need one admin, multiple admins, or role-based access?</li>
+              <li>Which map layers are useful versus overwhelming?</li>
+              <li>How much offline functionality is required for trust?</li>
+              <li>Does simulation mode make testing more realistic and useful?</li>
+              <li>Who is the most natural buyer: household, group, HOA, civic org, insurer, or partner?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPENDIX B: TECHNICAL CONSIDERATIONS -->
+      <section class="slide slide--appendix" data-index="21">
+        <div class="slide__content">
+          <span class="appendix-tag">Appendix B</span>
+          <span class="label">Early Technical Considerations</span>
+          <div class="card" style="padding: 44px 60px; margin-top: 24px; flex: 1;">
+            <ul class="appendix-bullets appendix-bullets--2col">
+              <li>Native iOS / Android paths may require platform-specific design and behavior decisions</li>
+              <li>Data-source reliability matters as much as interface design</li>
+              <li>Map overlays must be legible, useful, and not overpromise precision</li>
+              <li>Permissions should be designed before sensitive data is introduced</li>
+              <li>Offline mode must distinguish cached information from current live updates</li>
+              <li>Notification logic must avoid fatigue while still surfacing urgent changes</li>
+              <li>Simulation mode must allow end-to-end testing without requiring physical presence inside an active hazard area</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPENDIX C: VISUAL SYSTEM -->
+      <section class="slide slide--appendix" data-index="22">
+        <div class="slide__content">
+          <span class="appendix-tag">Appendix C</span>
+          <span class="label">App Visual System</span>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; flex: 1;">
+            <div class="card" style="padding: 40px 48px;">
+              <div class="panel-title">Design Direction</div>
+              <ul class="appendix-bullets" style="margin-top: 8px;">
+                <li>Clean iOS-first wireframes, white and warm gray base</li>
+                <li>Calm green for safe / check-in status</li>
+                <li>Orange for watch / prepare</li>
+                <li>Red only for evacuation / urgent alerts</li>
+                <li>Blue sparingly for official information or map context</li>
+                <li>Rounded cards, large readable labels, low visual noise</li>
+              </ul>
+            </div>
+            <div class="card" style="padding: 40px 48px;">
+              <div class="panel-title" style="color: var(--paper-faint);">Avoid</div>
+              <ul class="appendix-bullets" style="margin-top: 8px;">
+                <li>Tactical or military styling</li>
+                <li>Fear-based red-heavy screens</li>
+                <li>Overly complex emergency dashboards</li>
+                <li>Dense government-style interfaces</li>
+                <li>Prepper visual language</li>
+                <li>Anything that feels like social media chaos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPENDIX D: FIND / REPLACE NOTES -->
+      <section class="slide slide--appendix" data-index="23">
+        <div class="slide__content">
+          <span class="appendix-tag">Appendix D</span>
+          <span class="label">Find / Replace Notes</span>
+          <div class="card" style="padding: 44px 60px; margin-top: 24px;">
+            <ul class="appendix-bullets">
+              <li>Lee Hill Labs: replace with final company name if changed</li>
+              <li>Emergency Coordination App: replace with final app name</li>
+              <li>ECA: replace with final app shorthand</li>
+              <li>John: replace with full name when confirmed</li>
+              <li>Randall Fransen: confirm preferred display name</li>
+              <li>Colorado Front Range / Foothill Communities: refine first UAT geography</li>
+              <li>Use-of-funds TBDs: replace with real budget table when ready</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <nav class="deck-nav" aria-label="Slide navigation">
+    <div class="deck-nav__controls">
+      <button class="deck-nav__btn is-hidden" id="nav-home" type="button" aria-label="First slide">01</button>
+      <button class="deck-nav__btn is-hidden" id="nav-prev" type="button" aria-label="Previous slide">Prev</button>
+    </div>
+    <div class="deck-nav__strip" id="nav-strip" aria-hidden="true"></div>
+    <div class="deck-nav__counter">
+      <span id="slide-counter-current">01</span>/<span id="slide-counter-total">23</span>
+    </div>
+    <div class="deck-nav__controls">
+      <button class="deck-nav__btn" id="nav-next" type="button" aria-label="Next slide">Next</button>
+    </div>
+  </nav>
+
+  <script src="/presentation/js/slides.js"></script>
+</body>
+</html>

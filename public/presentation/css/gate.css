@@ -1,0 +1,80 @@
+.gate {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.gate__eyebrow {
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.gate__title {
+  margin-bottom: 12px;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(48px, 9vw, 96px);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.gate__sub {
+  margin-bottom: 42px;
+  color: var(--paper-faint);
+  font-size: 15px;
+}
+
+.gate__form {
+  width: min(320px, calc(100vw - 48px));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gate__input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid var(--mist-border);
+  border-radius: 0;
+  outline: none;
+  background: var(--panel);
+  color: var(--paper);
+  font-size: 16px;
+  text-align: center;
+}
+
+.gate__input:focus {
+  border-color: var(--gold);
+}
+
+.gate__btn {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 0;
+  background: var(--gold);
+  color: var(--bg-deep);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.gate__error {
+  min-height: 20px;
+  color: var(--danger);
+  font-size: 13px;
+  text-align: center;
+}

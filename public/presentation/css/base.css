@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #111312;
+  --bg-deep: #090a0a;
+  --paper: #f7f3ea;
+  --paper-muted: rgba(247, 243, 234, 0.70);
+  --paper-faint: rgba(247, 243, 234, 0.42);
+  --warm: #f5d772;
+  --gold: #ecc11c;
+  --olive: #86813a;
+  --mist: #98b8b6;
+  --teal: #00adb3;
+  --blue: #252e65;
+  --charcoal: #4f4f4f;
+  --mist-border: rgba(152, 184, 182, 0.38);
+  --panel: rgba(17, 19, 18, 0.84);
+  --divider: rgba(152, 184, 182, 0.22);
+  --danger: #f5d772;
+  --font-display: "Gotham", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  --font-body: "Gotham", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+code {
+  color: var(--gold);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+#bg-canvas,
+#grain-canvas {
+  position: fixed;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#bg-canvas {
+  filter: blur(80px);
+}
+
+#grain-canvas {
+  mix-blend-mode: screen;
+  opacity: 0.42;
+}

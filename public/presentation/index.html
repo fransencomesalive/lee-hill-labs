@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lee Hill Labs - Presentation</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Lee Hill Labs presentation workspace.">
+  <link rel="stylesheet" href="/presentation/css/base.css">
+  <link rel="stylesheet" href="/presentation/css/gate.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+  <main class="gate">
+    <span class="gate__eyebrow">Presentation</span>
+    <h1 class="gate__title">Lee Hill Labs</h1>
+    <p class="gate__sub">Enter the access code to continue</p>
+    <form class="gate__form" id="gate-form" autocomplete="off">
+      <input
+        class="gate__input"
+        type="password"
+        id="gate-input"
+        placeholder="Access code"
+        autocomplete="new-password"
+        autofocus
+      >
+      <button class="gate__btn" type="submit">Enter</button>
+      <p class="gate__error" id="gate-error" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="/presentation/js/gate.js"></script>
+</body>
+</html>

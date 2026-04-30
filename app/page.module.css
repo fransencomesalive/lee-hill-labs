@@ -1,0 +1,88 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 48px;
+  padding: 64px clamp(24px, 5vw, 96px);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(0, 173, 179, 0.24), transparent 34%),
+    radial-gradient(circle at 82% 24%, rgba(236, 193, 28, 0.24), transparent 30%),
+    radial-gradient(circle at 70% 82%, rgba(37, 46, 101, 0.42), transparent 42%),
+    linear-gradient(135deg, #111312 0%, #252e65 54%, #4f4f4f 100%);
+}
+
+.hero {
+  max-width: 980px;
+}
+
+.kicker {
+  margin-bottom: 18px;
+  color: #ecc11c;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 900px;
+  color: #f7f3ea;
+  font-size: clamp(64px, 11vw, 150px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.deck {
+  max-width: 720px;
+  margin-top: 28px;
+  color: rgba(247, 243, 234, 0.72);
+  font-size: clamp(18px, 2.3vw, 28px);
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border: 1px solid rgba(152, 184, 182, 0.34);
+  border-radius: 0;
+  background: rgba(17, 19, 18, 0.68);
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.card:hover {
+  border-color: rgba(236, 193, 28, 0.72);
+  transform: translateY(-2px);
+}
+
+.card span {
+  color: #f7f3ea;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.card p {
+  color: rgba(247, 243, 234, 0.64);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+@media (max-width: 820px) {
+  .page {
+    align-content: start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
