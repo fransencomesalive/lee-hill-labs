@@ -4,6 +4,8 @@
 
 Claude built the full 23-slide investor deck from Randall's outline. Headshots cropped and wired. Region map replaced with card grid after SVG fabrication failed.
 
+Codex reviewed the handoff, verified the build, and deployed production on Vercel.
+
 ## What Changed This Session
 
 - Replaced 5 placeholder slides with 23 real slides (19 core + 4 appendix)
@@ -12,6 +14,9 @@ Claude built the full 23-slide investor deck from Randall's outline. Headshots c
 - Fixed RF headshot crop: changed object-position from center 14% to center 0% so full head is visible
 - Replaced attempted SVG map with 3x2 region hazard card grid (Mountain Towns, Midwest/Plains, Urban/Suburban, California WUI, Colorado Foothills, Gulf/Atlantic highlighted)
 - Updated docs/current-state.md with full project state
+- Linked Vercel project: `fransencomesalive-4748s-projects/lee-hill-labs`
+- Deployed production: `https://lee-hill-labs.vercel.app`
+- Smoke-tested `/`, `/lee-hill-labs-index`, and `/lee-hill-labs-slides` with HTTP 200 responses
 
 ## Important Files
 
@@ -22,11 +27,11 @@ Claude built the full 23-slide investor deck from Randall's outline. Headshots c
 - `public/assets/RF-headshot.jpg` - Randall Fransen headshot (1365x2048 portrait)
 - `public/assets/us.svg` - Simplemaps US states SVG (available but not yet used)
 - `docs/current-state.md` - full project state, outstanding work, resume steps
+- `.vercel/project.json` - local Vercel project linkage, ignored by git
 
 ## Open Items
 
 - No remote GitHub repo yet — needs to be created and initial commit pushed
-- No Vercel deployment configured
 - Gate password placeholder: `leehill` — change before sharing
 - John Elliot experience bullets: placeholder text
 - Use-of-funds dollar amounts: all TBD
@@ -36,8 +41,8 @@ Claude built the full 23-slide investor deck from Randall's outline. Headshots c
 
 ## Next Best Steps
 
-1. Create GitHub repo, push initial commit
-2. Configure Vercel, get production URL
-3. Change gate password
-4. Fill in JE experience bullets and use-of-funds amounts
-5. Add iPhone wireframe screens (CSS pass)
+1. Create GitHub repo and push current commits
+2. Change gate password
+3. Fill in JE experience bullets and use-of-funds amounts
+4. Add iPhone wireframe screens (CSS pass)
+5. Add custom domain if needed

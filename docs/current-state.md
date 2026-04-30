@@ -2,7 +2,7 @@
 
 ## Status
 
-Full investor deck built on 2026-04-30. The presentation is 23 slides (19 core + 4 appendix) covering the Emergency Coordination App (ECA) angel pitch. Deck is interactive and content-complete except for placeholder wireframes, two AI-generated images, and use-of-funds dollar amounts.
+Full investor deck built and deployed on 2026-04-30. The presentation is 23 slides (19 core + 4 appendix) covering the Emergency Coordination App (ECA) angel pitch. Deck is interactive and content-complete except for placeholder wireframes, two AI-generated images, and use-of-funds dollar amounts.
 
 ## Stack
 
@@ -11,7 +11,9 @@ Full investor deck built on 2026-04-30. The presentation is 23 slides (19 core +
 - Presentation: static HTML/CSS/JS under `public/presentation`
 - Package manager: npm
 - Backend: none
-- Deployment: Vercel planned, not configured
+- Deployment: Vercel production configured
+- Production URL: `https://lee-hill-labs.vercel.app`
+- Vercel project: `fransencomesalive-4748s-projects/lee-hill-labs`
 
 ## Current Routes
 
@@ -49,7 +51,7 @@ Full investor deck built on 2026-04-30. The presentation is 23 slides (19 core +
 ## Known Risks
 
 - Gate password is placeholder: change before sharing with investors.
-- No production Vercel project configured.
+- Production Vercel project is configured and linked locally in `.vercel/`.
 - No remote GitHub repo exists yet.
 - `npm install` reports two moderate audit findings; no force fix applied.
 - John Elliot's relevant experience bullets are placeholder text.
@@ -65,9 +67,8 @@ Full investor deck built on 2026-04-30. The presentation is 23 slides (19 core +
 
 ## Resume Here
 
-1. Set up remote GitHub repo and push initial commit.
-2. Configure Vercel deployment and production URL.
-3. Update gate password before sharing.
-4. Add iPhone wireframe screens to placeholder slides.
-5. Wire in AI-generated images for slides 3 and 18 when ready.
-6. Fill in use-of-funds dollar amounts and John Elliot experience bullets.
+1. Set up remote GitHub repo and push current commits.
+2. Update gate password before sharing.
+3. Add iPhone wireframe screens to placeholder slides.
+4. Wire in AI-generated images for slides 3 and 18 when ready.
+5. Fill in use-of-funds dollar amounts and John Elliot experience bullets.
