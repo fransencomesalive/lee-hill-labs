@@ -1,6 +1,14 @@
 # Handoff - Lee Hill Labs
 
-## Latest Handoff - 2026-05-02
+## Latest Handoff - 2026-05-01
+
+Slide 17 headshot polish: RF crop adjusted, both headshots doubled in size.
+
+- RF headshot object-position tuned to `center 65%` (portrait; face centered in circle)
+- Both headshot circles increased from 88x88px to 176x176px
+- docs/current-state.md updated to reflect headshot state
+
+## Previous Handoff - 2026-05-02
 
 Claude built the full investor deck from Randall's outline. Headshots cropped and wired. Region map replaced with card grid after SVG fabrication failed.
 
@@ -10,7 +18,7 @@ Codex redeployed production on 2026-05-01 via `npx vercel --prod`; public alias 
 
 Codex created/pushed the GitHub remote `git@github.com:fransencomesalive/lee-hill-labs.git`; `main` tracks `origin/main` at `0c14b43 update Lee Hill Labs deck`.
 
-## What Changed This Session
+## What Changed (2026-05-02 session)
 
 - Deck is currently 22 slides (19 core + appendix A-C); Appendix D was removed and find/replace reminders live in docs.
 - Built full CSS design system: .card primitive, all layout types, founder cards, region grid, roadmap timeline, flow steps, tables, closing section

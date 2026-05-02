@@ -36,7 +36,7 @@ Full investor deck built and deployed on 2026-04-30. The presentation is 22 slid
 - Presentation favicon: broadcast antenna emoji on gate and slides pages
 - Full .card primitive with --panel background and --mist-border
 - Section dividers and cover slides on bare animated background
-- Headshots wired: JE-headshot.jpeg (John Elliot), RF-headshot.jpg (Randall Fransen)
+- Headshots wired: JE-headshot.jpeg (John Elliot), RF-headshot.jpg (Randall Fransen); both circles 176x176px; RF crop object-position center 65%
 - Region hazard map = 3x2 card grid (Mountain Towns, Midwest/Plains, Urban/Suburban, California WUI, Colorado Foothills, Gulf/Atlantic Coast)
 - Generated image wired: hazard context map on slide 3
 - Reusable iPhone mockup shell with ECA app screen mockups wired on slides 5, 9, 18, and 19

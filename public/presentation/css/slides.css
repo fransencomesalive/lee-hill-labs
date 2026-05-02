@@ -1490,8 +1490,8 @@
 }
 
 .founder-headshot {
-  width: 88px;
-  height: 88px;
+  width: 176px;
+  height: 176px;
   border-radius: 50%;
   background: rgba(152, 184, 182, 0.12);
   border: 2px solid var(--mist-border);
