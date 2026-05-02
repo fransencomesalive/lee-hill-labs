@@ -107,12 +107,16 @@ function startBackground() {
 startBackground();
 
 const viewport = document.querySelector(".slide-viewport");
+const slideStageEl = document.querySelector(".slide-stage");
 const deckNavEl = document.querySelector(".deck-nav");
 
 function scaleViewport() {
   const navHeight = deckNavEl ? deckNavEl.offsetHeight : 0;
   const availableHeight = Math.max(window.innerHeight - navHeight, 1);
   const scale = Math.min(window.innerWidth / 1920, availableHeight / 1080);
+  if (slideStageEl) {
+    slideStageEl.style.bottom = navHeight + "px";
+  }
   viewport.style.transform = "scale(" + scale + ")";
 }
 

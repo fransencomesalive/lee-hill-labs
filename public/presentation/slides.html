@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lee Hill Labs — ECA Investor Deck</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%A1%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/presentation/css/base.css">
   <link rel="stylesheet" href="/presentation/css/slides.css">
 </head>
@@ -23,7 +24,7 @@
         <div class="slide__content">
           <div class="slide__rule"></div>
           <h1 class="heading-cover">Emergency<br>Coordination<br>App</h1>
-          <p class="slide__sub">A community coordination layer for the moments when official information is necessary, but not enough.</p>
+          <p class="slide__sub">When roads close, signals drop, or risk changes fast, people need each other.</p>
           <div class="cover-footer">
             <span class="label">Lee Hill Labs</span>
             <span class="cover-footer__sep">/</span>
@@ -70,7 +71,9 @@
             <p class="table-note" style="margin-top: 24px;"><strong>ECA starts with wildfire.</strong> But the product category is broader: community-scale emergency coordination.</p>
           </div>
           <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div class="image-placeholder" style="flex: 1;">North America<br>Hazard Map</div>
+            <figure class="deck-image-panel" style="flex: 1;">
+              <img src="/assets/hazard-context-map.jpg" alt="Stylized North America hazard context map">
+            </figure>
             <div class="card" style="padding: 24px 28px;">
               <span class="label" style="font-size: 14px; margin-bottom: 8px; display: block;">Source</span>
               <p style="color: var(--paper-faint); font-size: 19px; font-weight: 300; line-height: 1.4;">NOAA/NCEI billion-dollar disaster dataset, NIFC wildfire statistics, FEMA preparedness resources</p>
@@ -165,10 +168,33 @@
               <li>Run mock drills and test plans before an actual incident</li>
             </ul>
           </div>
-          <div class="iphone-placeholder">
-            <span>Dashboard</span>
-            <span class="iphone-placeholder__caption">Group Status, Active Alerts, Map Snapshot, Tasks, People Checked In, Offline Plan</span>
-          </div>
+          <figure class="iphone-mock" aria-label="ECA dashboard app screen">
+            <div class="iphone-mock__frame">
+              <div class="iphone-mock__island"></div>
+              <div class="phone-screen phone-screen--dashboard">
+                <div class="phone-screen__status">
+                  <span>9:41</span>
+                  <span>ECA</span>
+                </div>
+                <div class="app-kicker">Boulder Heights</div>
+                <div class="incident-card">
+                  <span>Incident</span>
+                  <strong>Escape Route Fire</strong>
+                </div>
+                <div class="dashboard-status">
+                  <div><strong>12/14</strong><span>Checked in</span></div>
+                  <div class="dashboard-status__requests">! 2 requests !</div>
+                </div>
+                <div class="emergency-feed">
+                  <span>🚨 Evac zone expanded</span>
+                  <span>🧯 Wind shift update</span>
+                  <span>📡 Sheriff briefing live</span>
+                </div>
+                <button class="safe-button" type="button">I'M SAFE</button>
+                <div class="action-row"><span>Offline plan cached</span><strong>Ready</strong></div>
+              </div>
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -303,27 +329,107 @@
           <h2 class="heading-deck">Early design will focus on the flows that prove whether people understand and trust the app.</h2>
           <div class="screens-row">
             <div class="screen-card">
-              <div class="screen-placeholder">Onboarding</div>
+              <figure class="iphone-mock iphone-mock--mini" aria-label="ECA onboarding app screen">
+                <div class="iphone-mock__frame">
+                  <div class="iphone-mock__island"></div>
+                  <div class="phone-screen phone-screen--mini">
+                    <div class="app-kicker">ECA</div>
+                    <div class="app-title">Create Group</div>
+                    <div class="mini-card">Boulder Heights</div>
+                    <div class="mini-list">
+                      <span>Household</span>
+                      <span>Neighbors</span>
+                      <span>Emergency partner</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
               <div class="screen-label">Onboarding &amp; Group Creation</div>
             </div>
             <div class="screen-card">
-              <div class="screen-placeholder">Alert</div>
-              <div class="screen-label">Active Alert Dashboard</div>
+              <figure class="iphone-mock iphone-mock--mini" aria-label="ECA alert dashboard app screen">
+                <div class="iphone-mock__frame">
+                  <div class="iphone-mock__island"></div>
+                  <div class="phone-screen phone-screen--mini phone-screen--watch">
+                    <div class="app-kicker">Boulder Heights</div>
+                    <div class="app-title">Escape Route Fire</div>
+                    <div class="mini-card mini-card--gold">Group chat</div>
+                    <div class="mini-list">
+                      <span class="mini-card--amber">! 2 requests !</span>
+                      <span class="mini-news">🚨 Evac zone expanded<br>🧯 Wind shift update<br>📡 Sheriff briefing live</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="screen-label">Group Coordination</div>
             </div>
             <div class="screen-card">
-              <div class="screen-placeholder">Check-In</div>
+              <figure class="iphone-mock iphone-mock--mini" aria-label="ECA check-in app screen">
+                <div class="iphone-mock__frame">
+                  <div class="iphone-mock__island"></div>
+                  <div class="phone-screen phone-screen--mini phone-screen--safe">
+                    <div class="app-kicker">Group Status</div>
+                    <div class="app-title">12 of 14 Safe</div>
+                    <div class="check-ring">86%</div>
+                    <div class="mini-list">
+                      <span>2 need reply</span>
+                      <span>1 needs pickup</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
               <div class="screen-label">Group Check-In</div>
             </div>
             <div class="screen-card">
-              <div class="screen-placeholder">Map</div>
-              <div class="screen-label">Map Context</div>
+              <figure class="iphone-mock iphone-mock--mini" aria-label="ECA household info app screen">
+                <div class="iphone-mock__frame">
+                  <div class="iphone-mock__island"></div>
+                  <div class="phone-screen phone-screen--mini phone-screen--household">
+                    <div class="app-kicker">Boulder Heights</div>
+                    <div class="app-title">My Household</div>
+                    <div class="household-fields">
+                      <span><strong>Address</strong> 442 Ridge View</span>
+                      <span><strong>Door code</strong> 0719</span>
+                      <span><strong>Animals</strong> barn + mudroom</span>
+                      <span><strong>Supplies</strong> shovel, fire ext., water</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="screen-label">My Household</div>
             </div>
             <div class="screen-card">
-              <div class="screen-placeholder">Tasks</div>
+              <figure class="iphone-mock iphone-mock--mini" aria-label="ECA tasks app screen">
+                <div class="iphone-mock__frame">
+                  <div class="iphone-mock__island"></div>
+                  <div class="phone-screen phone-screen--mini">
+                    <div class="app-kicker">Coordination</div>
+                    <div class="app-title">Open Requests</div>
+                    <div class="mini-list mini-list--tasks">
+                      <span>! Horse Trailer !</span>
+                      <span>! Jumper Cables !</span>
+                      <span>! Dogs in house !</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
               <div class="screen-label">Task Assignment</div>
             </div>
             <div class="screen-card">
-              <div class="screen-placeholder">Offline</div>
+              <figure class="iphone-mock iphone-mock--mini" aria-label="ECA offline plan app screen">
+                <div class="iphone-mock__frame">
+                  <div class="iphone-mock__island"></div>
+                  <div class="phone-screen phone-screen--mini phone-screen--offline">
+                    <div class="app-kicker">Offline Plan</div>
+                    <div class="app-title">Cached</div>
+                    <div class="mini-card">Updated 8:42 AM</div>
+                    <div class="mini-list">
+                      <span>Contacts saved</span>
+                      <span>Routes saved</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
               <div class="screen-label">Offline Plan</div>
             </div>
           </div>
@@ -719,21 +825,39 @@
           <div class="card" style="padding: 52px 64px;">
             <span class="label">Mission / Operating Belief</span>
             <h2 class="heading-deck">Community resilience is built before the emergency.</h2>
-            <p class="body-text" style="margin-top: 20px;">The communities most exposed to changing weather, fire risk, and infrastructure strain cannot rely on information alone. They need preparation, trust, and coordination before the moment of crisis.</p>
+            <p class="body-text" style="margin-top: 20px;">The communities most exposed to changing weather, fire risk, and infrastructure strain cannot rely on information alone. They will need guided preparation, trust, and when the moment of crisis comes, the ability to coordinate.</p>
             <ul class="slide__bullets slide__bullets--tight" style="margin-top: 20px;">
-              <li>Checking on neighbors</li>
-              <li>Protecting family and pets</li>
-              <li>Knowing who has what</li>
-              <li>Sharing access carefully</li>
-              <li>Understanding when to leave</li>
-              <li>Helping without becoming noise</li>
-              <li>Learning from each event and improving the plan</li>
+              <li>Safe Neighbor status</li>
+              <li>Locating / protecting family and pets or livestock</li>
+              <li>Knowing which neighbor has helpful items: tractors, trailers, vehicles, water</li>
+              <li>Sharing access info securely</li>
+              <li>Local incident reporting / verification</li>
+              <li>Focused chat/help/coordination, less noise</li>
             </ul>
           </div>
-          <div class="iphone-placeholder">
-            <span>Civic</span>
-            <span class="iphone-placeholder__caption">Neighborhood road, foothills, early morning, subtle map line overlay</span>
-          </div>
+          <figure class="iphone-mock" aria-label="ECA civic coordination app screen">
+            <div class="iphone-mock__frame">
+              <div class="iphone-mock__island"></div>
+              <div class="phone-screen phone-screen--civic">
+                <div class="phone-screen__status">
+                  <span>9:41</span>
+                  <span>ECA</span>
+                </div>
+                <div class="app-kicker">Boulder Heights</div>
+                <div class="app-title">Preparedness Hub</div>
+                <div class="partner-panel">
+                  <span>Emergency partner view</span>
+                  <strong>4 neighborhood roles active</strong>
+                </div>
+                <div class="mini-list">
+                  <span>Check on Maple Drive</span>
+                  <span>Confirm pet transport</span>
+                  <span>Share generator access</span>
+                  <span>Run evacuation drill</span>
+                </div>
+              </div>
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -756,10 +880,25 @@
               We are building this because the gap is real, local, and repeatable. The first version starts here. The need does not stop here.
             </div>
           </div>
-          <div class="iphone-placeholder">
-            <span>Group Ready</span>
-            <span class="iphone-placeholder__caption">Plan available offline. 12 of 14 checked in. Active Wildfire Watch.</span>
-          </div>
+          <figure class="iphone-mock" aria-label="ECA group readiness app screen">
+            <div class="iphone-mock__frame">
+              <div class="iphone-mock__island"></div>
+              <div class="phone-screen phone-screen--ready">
+                <div class="phone-screen__status">
+                  <span>9:41</span>
+                  <span>ECA</span>
+                </div>
+                <div class="app-kicker">Boulder Heights</div>
+                <div class="app-title">Group Ready</div>
+                <div class="readiness-score">86%</div>
+                <div class="alert-card alert-card--watch">
+                  <span>Wildfire Watch</span>
+                  <strong>Route A cached</strong>
+                </div>
+                <div class="action-row"><span>Plan available offline</span><strong>Ready</strong></div>
+              </div>
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -831,25 +970,6 @@
                 <li>Anything that feels like social media chaos</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- APPENDIX D: FIND / REPLACE NOTES -->
-      <section class="slide slide--appendix" data-index="23">
-        <div class="slide__content">
-          <span class="appendix-tag">Appendix D</span>
-          <span class="label">Find / Replace Notes</span>
-          <div class="card" style="padding: 44px 60px; margin-top: 24px;">
-            <ul class="appendix-bullets">
-              <li>Lee Hill Labs: replace with final company name if changed</li>
-              <li>Emergency Coordination App: replace with final app name</li>
-              <li>ECA: replace with final app shorthand</li>
-              <li>John: replace with full name when confirmed</li>
-              <li>Randall Fransen: confirm preferred display name</li>
-              <li>Colorado Front Range / Foothill Communities: refine first UAT geography</li>
-              <li>Use-of-funds TBDs: replace with real budget table when ready</li>
-            </ul>
           </div>
         </div>
       </section>

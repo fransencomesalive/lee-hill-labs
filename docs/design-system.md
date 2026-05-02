@@ -62,6 +62,15 @@ Use Gotham for all deck typography.
 - Use presenter notes in docs when a slide needs supporting context.
 - Do not add instructional UI copy inside the deck unless it is part of the presentation.
 
+## App Screen Mockups
+
+- Use the shared CSS iPhone shell for every app screen; keep device geometry identical across slides.
+- Treat the shell and the app UI as separate layers: change `.phone-screen` content/styles for UX states, not the frame.
+- Current UI placeholder name is ECA; replace when the final app name and shorthand are chosen.
+- Current demo community is Boulder Heights; replace if the first test community changes.
+- Screen tone should feel like an emergency partner tool: calm, operational, legible, and trusted.
+- Map states should show evacuation routes and a hazard perimeter without overpromising official precision.
+
 ## Responsive Rules
 
 - Deck viewport remains 1920x1080.

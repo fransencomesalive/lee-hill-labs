@@ -59,7 +59,10 @@ Read in this order before any meaningful work:
 3. `docs/current-state.md`
 4. `docs/architecture.md`
 5. `docs/design-system.md`
-6. `docs/handoff.md`
+6. `docs/functionality-decision-log.md`
+7. `docs/handoff.md`
+
+Use `devlog` when a presentation decision should be saved as a functional product rule for future user stories or dev planning.
 
 ## Working Split
 

@@ -8,7 +8,8 @@ Before any work:
 2. `docs/current-state.md`
 3. `docs/architecture.md`
 4. `docs/design-system.md`
-5. `docs/handoff.md`
+5. `docs/functionality-decision-log.md`
+6. `docs/handoff.md`
 
 ## Project Goal
 
@@ -23,6 +24,7 @@ Build a standalone presentation project for Lee Hill Labs. Keep the technical fo
 - Keep visual assets in `public/assets/`.
 - Keep presentation shell files in `public/presentation/`.
 - Call out assumptions instead of silently making them.
+- When the user says `devlog`, capture the functional product rule in `docs/functionality-decision-log.md` for future user-story/dev-planning export.
 
 ## Frontend Expectations
 
