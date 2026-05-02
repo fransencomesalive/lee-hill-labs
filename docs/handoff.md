@@ -15,6 +15,8 @@ Claude built the full investor deck from Randall's outline. Headshots cropped an
 
 Codex reviewed the handoff, verified the build, and deployed production on Vercel.
 
+Codex codified two locked grain background presets for future work: `Original MTTL Grain Background` and `Presentation Grain Background`. Lee Hill uses the subtler presentation preset; do not alter animation/static parameters during palette swaps.
+
 Codex redeployed production on 2026-05-01 via `npx vercel --prod`; public alias `https://lee-hill-labs.vercel.app` smoke-tested HTTP 200 for `/`, `/lee-hill-labs-index`, and `/lee-hill-labs-slides`.
 
 Codex created/pushed the GitHub remote `git@github.com:fransencomesalive/lee-hill-labs.git`; `main` tracks `origin/main` at `0c14b43 update Lee Hill Labs deck`.
@@ -41,6 +43,7 @@ Codex created/pushed the GitHub remote `git@github.com:fransencomesalive/lee-hil
 - `public/assets/us.svg` - Simplemaps US states SVG (available but not yet used)
 - `docs/current-state.md` - full project state, outstanding work, resume steps
 - `docs/functionality-decision-log.md` - functionality rules and user-story seeds discovered through deck work
+- `docs/grain-background-presets.md` - locked MTTL/Wrenching and Lee Hill grain background parameters
 - `.vercel/project.json` - local Vercel project linkage, ignored by git
 
 ## Open Items

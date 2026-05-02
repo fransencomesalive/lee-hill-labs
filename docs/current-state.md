@@ -31,6 +31,7 @@ Full investor deck built and deployed on 2026-04-30. The presentation is 22 slid
 - Keyboard, click, and touch swipe navigation
 - Responsive proportional scaling (1920x1080 viewBox)
 - Animated canvas blob/grain background (Lee Hill Labs palette)
+- Grain background presets codified: `Original MTTL Grain Background` and `Presentation Grain Background`; Lee Hill currently uses the subtler `Presentation Grain Background`
 - SessionStorage password gate (password: `leehill` — placeholder)
 - Gotham font: Black 900 headlines, Medium 500 subheads, Light 300 body
 - Presentation favicon: broadcast antenna emoji on gate and slides pages
@@ -58,6 +59,7 @@ Full investor deck built and deployed on 2026-04-30. The presentation is 22 slid
 - Use Gotham for all presentation typography.
 - Use the Lee Hill Labs swatches as the source of truth for deck colors.
 - Preserve the Wrenching 101 index/password page and animated background pattern.
+- Treat grain background requests as locked preset requests: use `Original MTTL Grain Background` or `Presentation Grain Background` from `docs/grain-background-presets.md`; palette swaps change hex colors only.
 - Dense slides compressed inline (no sidebars); roadmap as timeline; tables maintained for pricing/use-of-funds.
 - Slide 10 regional map: card grid (not SVG map — SVG fabrication is unreliable).
 - ECA is the current in-app placeholder name; find/replace when the final product name is chosen.

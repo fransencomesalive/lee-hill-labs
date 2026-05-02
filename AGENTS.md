@@ -8,8 +8,9 @@ Before any work:
 2. `docs/current-state.md`
 3. `docs/architecture.md`
 4. `docs/design-system.md`
-5. `docs/functionality-decision-log.md`
-6. `docs/handoff.md`
+5. `docs/grain-background-presets.md`
+6. `docs/functionality-decision-log.md`
+7. `docs/handoff.md`
 
 ## Project Goal
 
@@ -31,6 +32,7 @@ Build a standalone presentation project for Lee Hill Labs. Keep the technical fo
 - Strong hierarchy, clean alignment, and intentional responsive behavior.
 - Presentation slides are 16:9 and scale proportionally in browser.
 - Preserve the Wrenching 101 presentation interaction model: same index/password page pattern, same animated blob/grain background behavior, same browser-deck navigation approach.
+- Grain backgrounds must use the locked presets in `docs/grain-background-presets.md`: `Original MTTL Grain Background` or `Presentation Grain Background`; palette swaps may change hex colors only.
 - Use the Lee Hill Labs swatch palette in `docs/design-system.md` across all presentation colors.
 - Use Gotham for all typography: black/heavy for headlines, medium for subheads and markers, light/regular for body copy.
 - Avoid in-slide instructional text about controls or implementation details.

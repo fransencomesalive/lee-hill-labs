@@ -5,11 +5,17 @@
 Preserve the Wrenching 101 presentation structure:
 
 - Same index/password page pattern.
-- Same animated blob background, grain texture, and slow ambient motion.
+- Same animated blob background, grain texture, and slow ambient motion, using the locked grain presets in `docs/grain-background-presets.md`.
 - Same browser-based 16:9 deck and proportional scaling behavior.
 - Same general navigation rhythm: arrows, space, pips, previous/next buttons, swipe.
 
 Replace the Wrenching 101 palette with the Lee Hill Labs swatches below.
+
+## Grain Background References
+
+- `Original MTTL Grain Background`: use for the original Wrenching 101 / Mettle / MTTL fuller grain treatment.
+- `Presentation Grain Background`: use for the subtler Lee Hill Labs presentation treatment.
+- For either preset, parameters are locked. Change only node hex colors and the base fill color unless Randall explicitly asks for new motion, opacity, blur, density, or mesh behavior.
 
 ## Visual Principles
 

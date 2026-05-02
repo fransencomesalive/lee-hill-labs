@@ -15,13 +15,15 @@ Before meaningful work:
 3. `docs/current-state.md`
 4. `docs/architecture.md`
 5. `docs/design-system.md`
-6. `docs/handoff.md`
+6. `docs/grain-background-presets.md`
+7. `docs/handoff.md`
 
 ## Working Style
 
 - Start with a short plan before major deck edits.
 - Design from the Lee Hill Labs brief and Randall's outline.
 - Preserve the Wrenching 101 presentation shell: same index/password page pattern, same animated blob/grain background behavior, and same deck navigation rhythm.
+- When using Mettle/MTTL/Wrenching/Lee Hill grain backgrounds, use the locked `Original MTTL Grain Background` or `Presentation Grain Background` presets in `docs/grain-background-presets.md`; change hex colors only unless Randall explicitly asks to alter motion or texture parameters.
 - Replace the Wrenching 101 colors with the Lee Hill Labs swatches documented in `docs/design-system.md`.
 - Use Gotham throughout: black/heavy for headlines, medium for subheads or markers, light/regular for body copy.
 - Keep slide copy sharp and presentation-paced.
