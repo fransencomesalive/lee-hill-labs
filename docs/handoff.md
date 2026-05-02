@@ -7,6 +7,7 @@ Slide 17 headshot polish: RF crop adjusted, both headshots doubled in size.
 - RF headshot object-position tuned to `center 65%` (portrait; face centered in circle)
 - Both headshot circles increased from 88x88px to 176x176px
 - docs/current-state.md updated to reflect headshot state
+- GitHub auto-deploy connected via `vercel git connect`; pushing to main now triggers production deploys automatically
 
 ## Previous Handoff - 2026-05-02
 
