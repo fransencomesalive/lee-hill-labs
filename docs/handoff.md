@@ -1,6 +1,6 @@
 # Handoff - Lee Hill Labs
 
-## Latest Handoff - 2026-04-30
+## Latest Handoff - 2026-05-02
 
 Claude built the full investor deck from Randall's outline. Headshots cropped and wired. Region map replaced with card grid after SVG fabrication failed.
 
@@ -8,9 +8,11 @@ Codex reviewed the handoff, verified the build, and deployed production on Verce
 
 Codex redeployed production on 2026-05-01 via `npx vercel --prod`; public alias `https://lee-hill-labs.vercel.app` smoke-tested HTTP 200 for `/`, `/lee-hill-labs-index`, and `/lee-hill-labs-slides`.
 
+Codex created/pushed the GitHub remote `git@github.com:fransencomesalive/lee-hill-labs.git`; `main` tracks `origin/main` at `0c14b43 update Lee Hill Labs deck`.
+
 ## What Changed This Session
 
-- Replaced 5 placeholder slides with 23 real slides (19 core + 4 appendix)
+- Deck is currently 22 slides (19 core + appendix A-C); Appendix D was removed and find/replace reminders live in docs.
 - Built full CSS design system: .card primitive, all layout types, founder cards, region grid, roadmap timeline, flow steps, tables, closing section
 - Wired JE-headshot.jpeg and RF-headshot.jpg as circular crops in the team slide
 - Fixed RF headshot crop: changed object-position from center 14% to center 0% so full head is visible
@@ -34,7 +36,6 @@ Codex redeployed production on 2026-05-01 via `npx vercel --prod`; public alias 
 
 ## Open Items
 
-- No remote GitHub repo yet — needs to be created and initial commit pushed
 - Gate password placeholder: `leehill` — change before sharing
 - John Elliot experience bullets: placeholder text
 - Use-of-funds dollar amounts: all TBD
@@ -52,8 +53,8 @@ Codex redeployed production on 2026-05-01 via `npx vercel --prod`; public alias 
 
 ## Next Best Steps
 
-1. Create GitHub repo and push current commits
-2. Change gate password
-3. Fill in JE experience bullets and use-of-funds amounts
-4. Review ECA app screen mockups for product accuracy and polish
-5. Add custom domain if needed
+1. Change gate password
+2. Fill in JE experience bullets and use-of-funds amounts
+3. Review ECA app screen mockups for product accuracy and polish
+4. Review generated slide 3 imagery for taste and investor-readiness
+5. Add OG image when share polish matters

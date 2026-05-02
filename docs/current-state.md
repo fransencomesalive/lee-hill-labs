@@ -14,6 +14,8 @@ Full investor deck built and deployed on 2026-04-30. The presentation is 22 slid
 - Deployment: Vercel production configured
 - Production URL: `https://lee-hill-labs.vercel.app`
 - Vercel project: `fransencomesalive-4748s-projects/lee-hill-labs`
+- GitHub remote: `git@github.com:fransencomesalive/lee-hill-labs.git`
+- Current pushed commit: `0c14b43 update Lee Hill Labs deck`
 - Latest production deploy: 2026-05-01 via `npx vercel --prod`; `/`, `/lee-hill-labs-index`, and `/lee-hill-labs-slides` smoke-tested HTTP 200.
 
 ## Current Routes
@@ -69,7 +71,6 @@ Full investor deck built and deployed on 2026-04-30. The presentation is 22 slid
 
 - Gate password is placeholder: change before sharing with investors.
 - Production Vercel project is configured and linked locally in `.vercel/`.
-- No remote GitHub repo exists yet.
 - `npm install` reports two moderate audit findings; no force fix applied.
 - John Elliot's relevant experience bullets are placeholder text.
 - Use-of-funds dollar amounts are all TBD.
@@ -93,8 +94,8 @@ Full investor deck built and deployed on 2026-04-30. The presentation is 22 slid
 
 ## Resume Here
 
-1. Set up remote GitHub repo and push current commits.
-2. Update gate password before sharing.
-3. Review ECA app screen mockups for product accuracy and polish.
-4. Review generated slide 3 imagery for taste and investor-readiness.
-5. Fill in use-of-funds dollar amounts and John Elliot experience bullets.
+1. Update gate password before sharing.
+2. Review ECA app screen mockups for product accuracy and polish.
+3. Review generated slide 3 imagery for taste and investor-readiness.
+4. Fill in use-of-funds dollar amounts and John Elliot experience bullets.
+5. Add OG image when share polish matters.
